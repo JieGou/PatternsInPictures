@@ -6,30 +6,32 @@ using System.Threading.Tasks;
 
 namespace MultipleInterfaces
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             //Create the lamp
-            ILamp lamp = new Lamp();
+            ILamp lamp = new Lamp()
+            {
+                // plugin the lamp
+                IsPlugged = true,
 
-            // plugin the lamp  
-            lamp.IsPlugged = true;
-
-            // turn it on 
-            // at this point it should print
-            // to console that the lamp is on
-            lamp.IsSwitchOn = true;
+                // turn it on
+                // at this point it should print
+                // to console that the lamp is on
+                IsSwitchOn = true,
+            };
 
             // create a fridge
-            IFridge fridge = new Fridge();
+            IFridge fridge = new Fridge()
+            {
+                // set the temperature to 58 degrees
+                SetTemperature = 58d,
 
-            // set the temperature to 58 degrees
-            fridge.SetTemperature = 58d;
-
-            // at this point, it should print 
-            // temperature to console. 
-            fridge.IsPlugged = true;
+                // at this point, it should print
+                // temperature to console.
+                IsPlugged = true,
+            };
         }
     }
 }

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PluginSample
 {
+    /// <summary>
+    /// 奶嘴
+    /// </summary>
     public class Pacifier : ISuccable
     {
         public void Suck()

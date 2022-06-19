@@ -8,10 +8,14 @@ namespace MultipleInterfaces
 {
     public interface ITemperatureSetter
     {
-        // the temperature set by hand
+        /// <summary>
+        /// the temperature set by hand
+        /// </summary>
         double SetTemperature { get; set; }
 
-        // the real fridge temperature
+        /// <summary>
+        /// the real fridge temperature
+        /// </summary>
         double RealTemperature { get; }
     }
 }

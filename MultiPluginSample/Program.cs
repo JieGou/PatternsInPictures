@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace MultiPluginSample
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            // create computer with 
-            // default (plain) mouse and keyboard
+            // create computer with default (plain) mouse and keyboard
             Computer computer = new Computer();
 
             // mouse and keyboard operations
@@ -23,10 +22,7 @@ namespace MultiPluginSample
 
             computer.ClickKeyboardKey('h');
 
-            // after the keyboard is changed to
-            // FancyKeyboard, the 
-            // keyboard messages should mention
-            // the 'Fancy' keyboard.
+            // after the keyboard is changed to FancyKeyboard, the keyboard messages should mention the 'Fancy' keyboard.
             computer.Keyboard = new FancyKeyboard();
 
             computer.ClickKeyboardKey('h');

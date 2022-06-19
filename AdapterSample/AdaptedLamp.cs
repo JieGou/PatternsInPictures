@@ -8,7 +8,9 @@ namespace AdapterSample
 {
     public class AdaptedLamp : AmericanLamp, IEuropeanPowerPlug
     {
-        // wrapping (adapting) the property.
+        /// <summary>
+        /// wrapping (adapting) the property.
+        /// </summary>
         public bool IsPluggedIntoEuropeanPowerOutlet
         {
             get => IsPluggedIntoAmericanPowerOutlet;

@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MultiPluginSample
-{    
-    // PlainKeyboard
-    // mentions PlainKeyboard in its console 
-    // messages
+{
+    /// <summary>
+    /// PlainKeyboard mentions PlainKeyboard in its console messages
+    /// </summary>
     public class PlainKeyboard : IKeyboard
     {
         public void KeyClick(char c)

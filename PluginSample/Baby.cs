@@ -8,16 +8,20 @@ namespace PluginSample
 {
     public class Baby
     {
-        ISuccable _succablePlugin = null;
+        private ISuccable _succablePlugin = null;
 
-        // set the succable plugin
+        /// <summary>
+        /// set the succable plugin
+        /// </summary>
+        /// <param name="succablePlugin"></param>
         public void SetSuccablePlugin(ISuccable succablePlugin)
         {
             _succablePlugin = succablePlugin;
         }
 
-        // method suck - call the corresponing
-        // plugin method
+        /// <summary>
+        /// method suck - call the corresponing plugin method
+        /// </summary>
         public void Suck()
         {
             _succablePlugin?.Suck();

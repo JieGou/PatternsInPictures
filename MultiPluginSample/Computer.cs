@@ -16,21 +16,15 @@ namespace MultiPluginSample
 
         public Computer()
         {
-            // defaults are set to 
-            // PlainMouse and 
-            // PlainKeyboard
-
+            // defaults are set to  PlainMouse and  PlainKeyboard
             Mouse = new PlainMouse();
-
             Keyboard = new PlainKeyboard();
         }
 
-        // wrapper around IMouse.X and IMouse.Y
-        // setters
+        // wrapper around IMouse.X and IMouse.Y setters
         public void MoveMouse(double x, double y)
         {
-            if (Mouse == null)
-                return;
+            if (Mouse == null) return;
 
             Mouse.X = x;
             Mouse.Y = y;

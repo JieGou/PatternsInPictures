@@ -8,7 +8,8 @@ namespace MultipleInterfaces
 {
     public class Lamp : ILamp
     {
-        bool _isSwitchOn = false;
+        private bool _isSwitchOn = false;
+
         public bool IsSwitchOn
         {
             get => _isSwitchOn;
@@ -19,13 +20,13 @@ namespace MultipleInterfaces
 
                 _isSwitchOn = value;
 
-                // set IsOn to be true iff 
-                // IsSwitchOn and IsPlugged are true
+                // set IsOn to be true iff(if and only if) IsSwitchOn and IsPlugged are true
                 IsOn = IsSwitchOn && IsPlugged;
             }
         }
 
-        bool _isOn = false;
+        private bool _isOn = false;
+
         public bool IsOn
         {
             get => _isOn;
@@ -38,11 +39,12 @@ namespace MultipleInterfaces
                 _isOn = value;
 
                 // print to console when IsOn changes
-                Console.WriteLine($"The lamp is {(_isOn ? "On": "Off")}");
+                Console.WriteLine($"The lamp is {(_isOn ? "On" : "Off")}");
             }
         }
 
-        bool _isPlugged = false;
+        private bool _isPlugged = false;
+
         public bool IsPlugged
         {
             get => _isPlugged;
@@ -54,8 +56,7 @@ namespace MultipleInterfaces
 
                 _isPlugged = value;
 
-                // set IsOn to be true iff 
-                // IsSwitchOn and IsPlugged are true
+                // set IsOn to be true iff(if and only if) IsSwitchOn and IsPlugged are true
                 IsOn = IsSwitchOn && IsPlugged;
             }
         }

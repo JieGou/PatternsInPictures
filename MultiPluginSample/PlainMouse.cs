@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace MultiPluginSample
 {
-    // PlainMouse
-    // mentions PlainMouse in its console 
-    // messages
+    /// <summary>
+    /// PlainMouse mentions PlainMouse in its console messages
+    /// </summary>
     public class PlainMouse : IMouse
     {
-        double _x = 0;
+        private double _x = 0;
+
         public double X
         {
             get => _x;
@@ -27,7 +28,8 @@ namespace MultiPluginSample
             }
         }
 
-        double _y = 0;
+        private double _y = 0;
+
         public double Y
         {
             get => _y;
